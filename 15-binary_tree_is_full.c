@@ -7,17 +7,18 @@
 */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return 0;
+if (tree == NULL)
+	return (0);
 
-    /* If the node has no children, it's full */
-    if (tree->left == NULL && tree->right == NULL)
-        return 1;
+/* If the node has no children, it's full */
+if (tree->left == NULL && tree->right == NULL)
+	return (1);
 
-    /* If the node has both children, it checks their subtrees */
-    if (tree->left && tree->right)
-        return binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right);
-
-    /* If only one child is present, the tree is not full */
-    return 0;
+/* If the node has both children, it checks their subtrees */
+if (tree->left && tree->right)
+{
+return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
+}
+/* If only one child is present, the tree is not full */
+return (0);
 }
